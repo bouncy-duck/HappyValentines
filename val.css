@@ -106,3 +106,8 @@ body{
     justify-self: center;
     align-self: center;
 }
+.resulttext1{
+    font-size: 2rem;
+    color: #ff0a54;
+    font-family: cursive;
+}

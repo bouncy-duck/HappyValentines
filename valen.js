@@ -39,7 +39,7 @@ let yesbool=false;
 let nobool=true;
 let sentences=["Ab maan bhi jao babuu!!","Muahh baby, choose fasttt!!","Say yes babygirl...","Very stubborn huhhh!!!","Aaa!, ab haa bhi kardo..","Chalo cutie haa karoo!","Biryani khilaunga haa kardo;)","Mai ro doonga abb...Fastt","Ab jaan logi kyaaa jii...","Haa kardo naaa...","Bohot pyar karungaaa!!"];
 let changeText=()=>{
-    if(count%3==0&&size!=0){
+    if(count%2==0&&size!=0){
         let index=100;
         while(index>=size||index<0){
             index=Math.floor(Math.random()*size);
@@ -102,7 +102,7 @@ let triggerEvent=()=>{
     popup.classList.remove('parentpopup1');
     popup.classList.add('result');
     let result=document.getElementById('newcont');
-    result.classList.add('resulttext');
+    result.classList.add('resulttext1');
 };
 yes.addEventListener("click",()=>triggerEvent());
 no.addEventListener("click",()=>triggerEvent());
