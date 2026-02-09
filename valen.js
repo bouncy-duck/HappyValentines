@@ -49,7 +49,7 @@ let changeText=()=>{
         size--;
     }
     else if(size==0&&count%3==0){
-        triggerEvent();
+        triggerEventx();
     }
     console.log('changeText triggered');
 }
@@ -83,10 +83,20 @@ yes.addEventListener('mouseenter',()=>{
         changeText();
     }
 });
-let triggerEvent=()=>{
+let triggerEventx=()=>{
     let popup=document.getElementById("parentpopup");
     popup.innerHTML=`
     <div id="newcont">Yayyyy!! Happy Valentine's babyyyy<3<3 <span style="font-size:10px;">(ab aur kitna rukuuu)</span>
+    </div>`;
+    popup.classList.remove('parentpopup1');
+    popup.classList.add('result');
+    let result=document.getElementById('newcont');
+    result.classList.add('resulttext');
+};
+let triggerEvent=()=>{
+    let popup=document.getElementById("parentpopup");
+    popup.innerHTML=`
+    <div id="newcont">Yayyyy!! Happy Valentine's babyyyy<3<3
     </div>`;
     popup.classList.remove('parentpopup1');
     popup.classList.add('result');
