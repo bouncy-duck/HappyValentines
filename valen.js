@@ -37,7 +37,7 @@ let count=0;
 let size=10;
 let yesbool=false;
 let nobool=true;
-let sentences=["Ab maan bhi jao babuu!!","Muahh baby, choose fasttt!!","Say yes babygirl...","Very stubborn huhhh!!!","Aaa!, ab haa bhi kardo..","Chalo cutie haa karoo!","Biryani khilaunga haa kardo;)","Mai ro doonga abb...Fastt","Ab jaan logi kyaaa jii...","Haa kardo naaa...","Bohot pyar karungaaa!!"];
+let sentences=["Ab maan bhi jaoo!!","Bbg, choose fasttt!!","Say yesss bbg...","Very stubborn huhhh!!!","Aaa!, ab haa bhi kardo..","Chalo cutie haa karoo!","Biryani khilaunga haa kardo;)","Fasttt...","Ab jaan logi kyaaa jii...","Haa kardo naaa..."];
 let changeText=()=>{
     if(count%3==0&&size!=0){
         let index=100;
