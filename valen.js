@@ -31,16 +31,29 @@ hearts.forEach(heart=>{
     console.log(z);
     heart.style.transform=`rotate(${deg}deg) scale(${resize})`;
 });
-// const popup=document.getElementById("popup");
-// let x=window.innerWidth/2;
-// let y=window.innerHeight/2;
-// popup.style.left=`${x}px`;
-// popup.style.top=`${y}px`;
 const yes=document.getElementById('btn1');
 const no=document.getElementById('btn2');
+let count=0;
+let size=10;
 let yesbool=false;
 let nobool=true;
-no.addEventListener('mouseenter',()=>{
+let sentences=["Ab maan bhi jao babuu!!","Muahh baby, choose fasttt!!","Say yes babygirl...","Very stubborn huhhh!!!","Aaa!, ab haa bhi kardo..","Chalo cutie haa karoo!","Biryani khilaunga haa kardo;)","Mai ro doonga abb...Fastt","Ab jaan logi kyaaa jii...","Haa kardo naaa...","Bohot pyar karungaaa!!"];
+let changeText=()=>{
+    if(count%3==0&&size!=0){
+        let index=100;
+        while(index>=size||index<0){
+            index=Math.floor(Math.random()*size);
+        }
+        document.getElementById('popup').innerText=`${sentences[index]}`;
+        sentences.splice(index,1);
+        size--;
+    }
+    else if(size==0&&count%3==0){
+        triggerEvent();
+    }
+    console.log('changeText triggered');
+}
+no.addEventListener('mouseover',()=>{
     if(nobool){
         yesbool=true;
         nobool=false;
@@ -51,6 +64,8 @@ no.addEventListener('mouseenter',()=>{
         yes.classList.toggle('btn2');
         no.classList.toggle('btn2');
         no.classList.toggle('btn1');
+        count++;
+        changeText();
     }
 });
 yes.addEventListener('mouseenter',()=>{
@@ -64,16 +79,20 @@ yes.addEventListener('mouseenter',()=>{
         no.classList.toggle('btn2');
         yes.classList.toggle('btn2');
         yes.classList.toggle('btn1');
+        count++;
+        changeText();
     }
 });
-yes.addEventListener("click",()=>{
+let triggerEvent=()=>{
     let popup=document.getElementById("parentpopup");
     popup.innerHTML=`
-    <div id="newcont">Yayyyy!! Happy Valentine's babyyyy<3<3
+    <div id="newcont">Yayyyy!! Happy Valentine's babyyyy<3<3 <span style="font-size:10px;">(ab aur kitna rukuuu)</span>
     </div>`;
     popup.classList.remove('parentpopup1');
     popup.classList.add('result');
     let result=document.getElementById('newcont');
     result.classList.add('resulttext');
-});
+};
+yes.addEventListener("click",()=>triggerEvent());
+no.addEventListener("click",()=>triggerEvent());
 

@@ -42,20 +42,6 @@ body{
     border-right: 2px solid var(--bordercolor);
     border-bottom: 2px solid var(--bordercolor);
 }
-.parentpopup{
-    /* position: fixed; */
-    /* inset: 0; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* height: 100vh; */
-    margin: 40vh 55vb;
-    height: 20vh;
-    background-color: #ffe5ec;
-    border-radius: 50px;
-    z-index: 1001;
-    /* background-color: white; */
-}
 .popup{
     /* position: absolute; */
     color: #ff0a54;
@@ -67,7 +53,7 @@ body{
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: 45vh 55vb;
+    margin: 40vh 55vb;
     height:20vh;
     grid-template-columns: 100vb;
     grid-template-rows: 100px 10px;
@@ -103,7 +89,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 45vh 55vb;
+    margin: 40vh 55vb;
     height:20vh;
     background-color: #ffe5ec;
     border-radius: 50px;
