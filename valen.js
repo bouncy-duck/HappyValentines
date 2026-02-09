@@ -34,7 +34,7 @@ hearts.forEach(heart=>{
 const yes=document.getElementById('btn1');
 const no=document.getElementById('btn2');
 let count=0;
-let size=10;
+let size=1;
 let yesbool=false;
 let nobool=true;
 let sentences=["Ab maan bhi jao babuu!!","Muahh baby, choose fasttt!!","Say yes babygirl...","Very stubborn huhhh!!!","Aaa!, ab haa bhi kardo..","Chalo cutie haa karoo!","Biryani khilaunga haa kardo;)","Mai ro doonga abb...Fastt","Ab jaan logi kyaaa jii...","Haa kardo naaa...","Bohot pyar karungaaa!!"];
@@ -86,10 +86,11 @@ yes.addEventListener('mouseenter',()=>{
 let triggerEventx=()=>{
     let popup=document.getElementById("parentpopup");
     popup.innerHTML=`
-    <div id="newcont">Yayyyy!! Happy Valentine's babyyyy<3<3 <span style="font-size:10px;">(ab aur kitna rukuuu)</span>
+    <div id="newcont"><div class="lines">YOU ARE MY VALENTINE NOWW... <div class="lines">Happy Valentine's babyyyy<3<3 <div class="lines"><span style="font-size:10px;">(ab aur kitna rukuuu)</span>
     </div>`;
     popup.classList.remove('parentpopup1');
     popup.classList.add('result');
+    popup.style.fontSize=`1.5rem`;
     let result=document.getElementById('newcont');
     result.classList.add('resulttext');
 };

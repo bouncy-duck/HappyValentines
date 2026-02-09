@@ -99,4 +99,10 @@ body{
     font-size: 2rem;
     color: #ff0a54;
     font-family: cursive;
+    display: grid;
+    grid-template-columns: 100vb;
+}
+.lines{
+    justify-self: center;
+    align-self: center;
 }
